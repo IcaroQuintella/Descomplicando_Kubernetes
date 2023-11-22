@@ -10,7 +10,7 @@ spec:
     name: webserver
 # --- Adcioando o volume ao diretorio /giropops ---
 # volumeMounts: Define o caminho onde será montado o volume
-# Estrtutura, deverá está identando junto com as definições do containers, exemplo "name"
+# Estrutura, deverá está identando junto com as definições do containers, exemplo "name"
 # "volumeMounts:
 #   - mountPath: Caminho
 #     name: Nome_do_volume"
