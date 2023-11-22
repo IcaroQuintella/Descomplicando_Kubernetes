@@ -1,0 +1,31 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: giropops
+  name: giropops-emptydir
+spec:
+  containers:
+  - image: nginx
+    name: webserver
+# --- Adcioando o volume ao diretorio /giropops ---
+# volumeMounts: Define o caminho onde será montado o volume
+# Estrtutura, deverá está identando junto com as definições do containers, exemplo "name"
+# "volumeMounts:
+#   - mountPath: Caminho
+#     name: Nome_do_volume"
+# Você precisa definir os volume na mesma identação do icone "conatiners"    
+    volumeMounts:
+    - mountPath: /giropops
+      name: primeiro-emptydir  
+    resources:
+      limits:
+        cpu: "1"
+        memory: "128Mi"    
+      requests:
+        cpu: "0.5"
+        memory: "64Mi"   
+  volumes:
+  - name: primeiro-emptydir
+    emptyDir:
+      sizeLimit: "256Mi"      
