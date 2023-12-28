@@ -11,6 +11,6 @@ spec:
     - ReadWriteOnce
   persistentVolumeReclaimPolicy: Retain
   nfs:
-    server: 192.168.18.51
+    server: 10.0.2.15
     path: "/mnt/nfs"  
   storageClassName: primeiro-sc  
